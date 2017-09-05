@@ -1,12 +1,6 @@
-/**
- * Created by dawid on 06.06.17.
- */
-/**
- * Created by dawid on 06.06.17.
- */
 
-import {Component} from "angular2/core"
-import {Router, ROUTER_DIRECTIVES} from "angular2/router"
+import {Component} from "angular2/core";
+import {Router, ROUTER_DIRECTIVES} from "angular2/router";
 import {GameService} from "../../../../../../www/GameCenter/dev/game.service";
 import {RequestOptions} from "angular2/http";
 import {Observable} from "rxjs/Observable";

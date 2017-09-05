@@ -1,6 +1,4 @@
-/**
- * Created by dawid on 31.05.17.
- */
+
 import {Component} from "angular2/core"
 import {Router, ROUTER_DIRECTIVES} from "angular2/router"
 import {GameService} from "../../../../../../www/GameCenter/dev/game.service";
