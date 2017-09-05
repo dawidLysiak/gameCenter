@@ -1,0 +1,40 @@
+<p align="right"><a [routerLink]="['Login']">Wyloguj</a></p>
+
+<div class="container">
+    <div class="timeline">
+        <div class="row">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container">
+
+
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a [routerLink]="['ListGames']">Lista Gier</a></li>
+                        <li><a [routerLink]="['AddGame']">Dodaj grę</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form_main">
+                        <h4 class="heading"><strong>Dodaj </strong> Grę <span></span></h4>
+                        <div class="form">
+                            <form ngNoForm action="http://localhost/gameCenter/addGame.php" target="_blank" method="POST">
+                                Tytuł <input id="name" type="text" class="txt" #name> <br>
+                                Opis <input id="desc" type="text" class="txt" #desc> <br>
+                                Kategoria <input id="category" type="text" class="txt" #desc> <br>
+                                Wybierz zdjęcie  <input type="file" name="pic" accept="image/*" #image>
+                                Dodaj plik z grą <input type="file" name="pic"  #file>
+                                <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".pdf,.doc,.docx">
+                                <button class="button" style="vertical-align:middle" (click)="addGame(name.value, desc.value, desc.value, file.value)"><span>Dodaj Grę</span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{{status}}
