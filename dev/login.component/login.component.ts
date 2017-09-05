@@ -1,7 +1,7 @@
 /**
  * Created by dawid on 31.05.17.
  */
-import {Component} from "angular2/core"
+import {Component} from "angular2/core";
 import {LoginService} from "../../../../../../www/GameCenter/dev/login.service";
 import {Router} from "angular2/router";
 
