@@ -1,13 +1,14 @@
 
 import {Component} from "angular2/core";
-import {LoginService} from "../../../../../../www/GameCenter/dev/login.service";
 import {Router} from "angular2/router";
+import {LoginService} from "../login.service";
 
 @Component({
   selector: "login",
   templateUrl:'dev/login.component/login.component.html',
   styleUrls: ['dev/login.component/login.component.css'],
   providers: [LoginService]
+
 })
 export class LoginComponent{
     public userID;
@@ -30,6 +31,7 @@ export class LoginComponent{
 
             this.userID = this.user[ this.userKeys[0]];
             var url ='';
+
 
             if(this.userID != ''){
                 this._router.navigate(["ListGames",{id:this.userID}]);
