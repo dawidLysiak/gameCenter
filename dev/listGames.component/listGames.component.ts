@@ -23,7 +23,7 @@ export class ListGamesComponent{
         .subscribe(
         data =>{ this.games = data}),
         error => alert("error"),
-        () =>  console.log("finish");
+        () =>  console.log("findsish");
       this.selectedGame.ico_path = "default.png";
   }
     getComments(id){
@@ -35,7 +35,7 @@ export class ListGamesComponent{
     }
   onSelect(game){
     this.selectedGame = game;
-    this.download = "Pobierz";
+    this.download = "Download";
     // this.comments = "";
     this.getComments(this.selectedGame.id);
   }

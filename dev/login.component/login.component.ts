@@ -35,7 +35,7 @@ export class LoginComponent{
                 this._router.navigate(["ListGames",{id:this.userID}]);
             }
             else {
-                this.response = "Niepoprawne dane";
+                this.response = "Zle dane";
             }
         }
     }
