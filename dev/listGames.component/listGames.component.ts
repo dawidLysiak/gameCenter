@@ -1,7 +1,9 @@
-
+/**
+ * Created by dawid on 31.05.17.
+ */
 import {Component} from "angular2/core"
 import {Router, ROUTER_DIRECTIVES} from "angular2/router"
-import {GameService} from "../../../../../../www/GameCenter/dev/game.service";
+import {GameService} from "../game.service";
 
 @Component({
   selector: "librarian-main",
@@ -23,7 +25,7 @@ export class ListGamesComponent{
         .subscribe(
         data =>{ this.games = data}),
         error => alert("error"),
-        () =>  console.log("findsish");
+        () =>  console.log("finish");
       this.selectedGame.ico_path = "default.png";
   }
     getComments(id){
@@ -35,7 +37,7 @@ export class ListGamesComponent{
     }
   onSelect(game){
     this.selectedGame = game;
-    this.download = "Download";
+    this.download = "Pobierz";
     // this.comments = "";
     this.getComments(this.selectedGame.id);
   }

@@ -1,14 +1,15 @@
-
-import {Component} from "angular2/core";
-import {Router} from "angular2/router";
+/**
+ * Created by dawid on 31.05.17.
+ */
+import {Component} from "angular2/core"
 import {LoginService} from "../login.service";
+import {Router} from "angular2/router";
 
 @Component({
   selector: "login",
   templateUrl:'dev/login.component/login.component.html',
   styleUrls: ['dev/login.component/login.component.css'],
   providers: [LoginService]
-
 })
 export class LoginComponent{
     public userID;
@@ -32,12 +33,11 @@ export class LoginComponent{
             this.userID = this.user[ this.userKeys[0]];
             var url ='';
 
-
             if(this.userID != ''){
                 this._router.navigate(["ListGames",{id:this.userID}]);
             }
             else {
-                this.response = "Zle dane";
+                this.response = "Niepoprawne dane";
             }
         }
     }
